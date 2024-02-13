@@ -139,6 +139,7 @@ export const AddNewBook = () => {
                 >
                   <li>
                     <a
+                      href="/#"
                       onClick={() => categoryField("FE")}
                       className="dropdown-item"
                     >
@@ -147,6 +148,7 @@ export const AddNewBook = () => {
                   </li>
                   <li>
                     <a
+                      href="/#"
                       onClick={() => categoryField("BE")}
                       className="dropdown-item"
                     >
@@ -155,6 +157,7 @@ export const AddNewBook = () => {
                   </li>
                   <li>
                     <a
+                      href="/#"
                       onClick={() => categoryField("Data")}
                       className="dropdown-item"
                     >
@@ -163,6 +166,7 @@ export const AddNewBook = () => {
                   </li>
                   <li>
                     <a
+                      href="/#"
                       onClick={() => categoryField("DevOps")}
                       className="dropdown-item"
                     >

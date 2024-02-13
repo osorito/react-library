@@ -63,7 +63,7 @@ export const BookCheckoutPage = () => {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  }, [isCheckedOut]);
+  }, [isCheckedOut, bookId]);
 
   useEffect(() => {
     const fetchBookReviews = async () => {
@@ -103,7 +103,7 @@ export const BookCheckoutPage = () => {
       setIsLoadingReview(false);
       setHttpError(error.message);
     });
-  }, [isReviewLeft]);
+  }, [isReviewLeft, bookId]);
 
   useEffect(() => {
     const fetchUserReiviewBook = async () => {
@@ -129,7 +129,7 @@ export const BookCheckoutPage = () => {
       setIsLoadingUserReview(false);
       setHttpError(error.message);
     });
-  }, [authState]);
+  }, [authState, bookId]);
 
   useEffect(() => {
     const fetchUserCurrentLoansCount = async () => {
@@ -182,7 +182,7 @@ export const BookCheckoutPage = () => {
       setIsLoadingBookCheckedOut(false);
       setHttpError(error.message);
     });
-  }, [authState]);
+  }, [authState, bookId]);
 
   if (
     isLoading ||
@@ -227,7 +227,7 @@ export const BookCheckoutPage = () => {
       bookId,
       reviewDescription
     );
-    console.log(reviewRequestModel);
+    //console.log(reviewRequestModel);
     const url = `${process.env.REACT_APP_API}/reviews/secure`;
     const requestOptions = {
       method: "POST",

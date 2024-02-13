@@ -8,7 +8,7 @@ export const ChangeQuantityOfBook: React.FC<{
 }> = (props, key) => {
   const { authState } = useOktaAuth();
   const [quantity, setQuantity] = useState(0);
-  const [remainig, setRemaining] = useState<number>(0);
+  const [remainig, setRemaining] = useState(0);
 
   useEffect(() => {
     const fetchBookInState = () => {
@@ -18,6 +18,7 @@ export const ChangeQuantityOfBook: React.FC<{
         : setRemaining(0);
     };
     fetchBookInState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const increaseQuantity = async () => {

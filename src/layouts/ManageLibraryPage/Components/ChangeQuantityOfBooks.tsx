@@ -49,7 +49,7 @@ export const ChangeQuantityOfBooks = () => {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  }, [currentPage, bookDelete]);
+  }, [currentPage, bookDelete, booksPerPage]);
 
   const indexOfLastBook: number = currentPage * booksPerPage;
   const indexOfFirstBook: number = indexOfLastBook - booksPerPage;

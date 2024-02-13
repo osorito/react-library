@@ -6,6 +6,8 @@ import OktaSignInWidget from "./OktaSignInWidget";
 const LoginWidget = ({ config }) => {
   const { oktaAuth, authState } = useOktaAuth();
   const onSuccess = (tokens) => {
+    console.log("tokens");
+    console.log(tokens);
     oktaAuth.handleLoginRedirect(tokens);
   };
 
